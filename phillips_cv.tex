@@ -16,7 +16,14 @@
   curriculum vita,
   cv,
   zack,
-  phillips
+  phillips,
+  microscopy,
+  led array,
+  computational microscopy,
+  insitro,
+  computational imaging,
+  imaging,
+  berkeley,
 }
 
 \setlength\parindent{0pt}
@@ -29,11 +36,9 @@
 \usepackage{url}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
-%\usepackage{ocgtools}
 \usepackage{enumitem}
 \setlist{nolistsep,leftmargin=0.15in, rightmargin=0.15in}
 \usepackage[log-declarations=false]{xparse}
-%\usepackage[garamond]{mathdesign}
 \usepackage[no-math]{fontspec}
 \usepackage{microtype}
 \usepackage[margin=1.125in,top=1.375in,right=1in,left=1.85in]{geometry}
@@ -110,15 +115,6 @@
 \renewcommand{\date}[1]{{} #1}
 \renewcommand{\labelitemi}{-}
 
-%\setmainfont[
-%  Ligatures={TeX,Common},
-%  BoldFont={AGaramondPro-Semibold},
-%]{Adobe Garamond Pro}
-%\setsansfont[
-%  Ligatures={TeX,Common},
-%  Letters=SmallCaps,
-%  Color=660000,
-%]{Adobe Garamond Pro}
 \setmainfont[Scale=0.8,Ligatures={TeX,Common}]{Optima}
 \setmonofont[Scale=0.8,Ligatures={TeX,Common}]{Optima}
 
@@ -128,15 +124,12 @@
 
 \begin{document}\flushbottom
 \pagestyle{fancy} \setlength\headwidth{6.5in}
-\rhead{\textsc{Zack Phillips ~    \thepage{} of \pageref*{LastPage}}} \cfoot{}
+\rhead{\textsc{Zack Phillips, PhD ~    \thepage{} of \pageref*{LastPage}}} \cfoot{}
 \thispagestyle{empty}
 \begin{adjustwidth}{-1in}{}
   \vspace*{-1cm}
 {\Huge
-  {\textsc{%
-Zack
-Phillips}
-  }
+  {\textsc{Zack Phillips, PhD}}
 }
 \hfill\hfill\hfill
 {
@@ -159,76 +152,73 @@ Phillips}
 \end{adjustwidth}
 \reversemarginpar
 \setlength\marginparwidth{0.85in}
-% \smallskip
-% \mhead{Summary}Fourth-year doctoral student at UC Berkeley exploring internship opportunities in both hardware and computational techniques for imaging and display
+\smallskip
+\mhead{Overview}
+\par\vspace{-\baselineskip}
+\mhead{}Full-stack optical sensing engineer and manager, currently a core architect of insitro's ML-enabled drug discovered platform. Ex-Apple R\&D Engineer, XDG. Deep-tech microscopy start-up Co-founder.
 
 \medskip
 \mhead{Professional \newline Experience}%
 
 \par\vspace{-\baselineskip}
 
-\textbf{Advanced Imaging Methods Group, \textbf{Insitro}} ~|~ South San Francisco, California \newline
-\emph{Assiciate Director, Microscopy Systems}  \rdate{{September~2023 - Present}}
-
-\emph{Staff Automation Engineer, Microscopy}  \rdate{{March~2023 - August 2023}}
-
-\emph{Senior ML Optical Engineer}  \rdate{{November~2021 - March 2023}}
+\textbf{Computational Microscopy Group, \textbf{insitro}} ~|~ South San Francisco, California \newline
+\emph{Associate Director, Computational Microscopy}  \rdate{{September~2023 - Present}} \newline
+\emph{Staff Automation Engineer, Microscopy}  \rdate{{March~2023 - September~2023}} \newline
+\emph{Senior ML Optical Engineer}  \rdate{{November~2021 - March~2023}}
 
 \begin{itemize*}
-  \item Led Advanced Imaging Modalities group; ML-enabled microscopy for drug discovery
-  \item Member of imaging platform, responsible for developing and scaling microscopy platform
+  \item Platform architect and full-stack engineer of insitro's ML-enabled drug discovery platform
 \end{itemize*}
 
 \textbf{Exploratory Design Group (XDG), \textbf{Apple}} ~|~ Cupertino, California \newline
-\emph{Photonics Engineer}  \rdate{{July~2019 - October 2021}}
+\emph{Photonics Engineer}  \rdate{{July~2019 - October~2021}}
 \begin{itemize*}
-  \item Project lead for interdisciplinary R\&D effort within Biophotonics group
-  \item Delivered monthly progress updates to Apple Fellow (VP) and team
+  \item Full-stack optical sensing IC and tech lead of interdisciplinary R\&D effort in Biophotonics Group
 \end{itemize*}
 
 \smallskip
 \textbf{Waller Lab, University of California, Berkeley} ~|~  Berkeley, California \newline
-\emph{Graduate Student Researcher (\href{http://www.laurawaller.com}{PI: Laura Waller})} \rdate{{July}~2014 - {May}~2019}
+\emph{Graduate Student Researcher (\href{http://www.laurawaller.com}{PI: Laura Waller})} \rdate{July~2014 - May~2019}
 \begin{itemize*}
-  \item Developed methods for phase retrieval, super-resolution, and high-throughput optical microscopy
-  \item Cultivated duel expertise in GPU computation (inverse problems) and optical hardware
-  \item Mentored 11 undergraduates for summer and semester projects
+  \item Developed and published methods for multi-modal and high-throughput optical microscopy
+  \item Spun out hardware development efforts into a commercially successful company (SCI Microscopy)
 \end{itemize*}
 
 \smallskip
 \textbf{SCI Microscopy} ~|~ Berkeley, California \newline
-\emph{CEO and Co-founder (with Laura Waller) - \href{http://sci-microscopy.com}{website}}\rdate{{Jan~2017 - Present}}
+\emph{CEO and Co-founder (with Laura Waller) - \href{http://sci-microscopy.com}{website}}\rdate{{January~2017 - Present}}
 \begin{itemize*}
   \item Spin-off company focused on developing illuminators for computational microscopy
   \item Designed and delivered over 40+ LED arrays to customers across 7+ countries
 \end{itemize*}
 
 \smallskip
-\textbf{DISP Lab, \textbf{Duke University}} ~|~ Durham, NC \newline
-\emph{Associate in Research (\href{http://www.disp.duke.edu/}{PI: David Brady}) } \rdate{{May}~2013 - {May}~2014}
+\textbf{DISP Lab, \textbf{Duke University}} ~|~ Durham, North Carolina \newline
+\emph{Associate in Research (\href{http://www.disp.duke.edu/}{PI: David Brady}) } \rdate{May~2013 - May~2014}
 \begin{itemize*}
 	\item R\&D engineer for AWARE Gigapixel camera; Work featured in \href{http://www.npr.org/2013/12/10/250000359/supercamera-more-pixels-than-you-know-what-to-do-with}{NPR's \textit{All Things Considered}}
 \end{itemize*}
 
 \medskip
 \mhead{Education}%
-\textbf{University of California, Berkeley} \newline
-\emph{Ph.D., \href{http://ast.coe.berkeley.edu/}{Applied Science and Technology}} \rdate{2014 - 2019}
+\textbf{University of California, Berkeley} ~|~ Berkeley, California \newline
+\emph{Ph.D., \href{http://ast.coe.berkeley.edu/}{Applied Science and Technology}}. GPA 3.6 \rdate{June~2014 - May~2019}
 \begin{itemize}
   \item Dissertation: \href{https://escholarship.org/uc/item/70d9j190}{Quantitative Microscopy Using Coded Illumination}
   \item Research Advisor: \href{http://www.laurawaller.com}{Laura Waller}
 \end{itemize}
 
-\textbf{University of California, Berkeley} \newline
-\emph{M.S., \href{http://ast.coe.berkeley.edu/}{Applied Science and Technology}} \rdate{2014 - 2016}
+\textbf{University of California, Berkeley} ~|~ Berkeley, California  \newline
+\emph{M.S., \href{http://ast.coe.berkeley.edu/}{Applied Science and Technology}}. GPA 3.6 \rdate{June~2014 - December~2016}
 \begin{itemize}
   \item Thesis: \href{https://github.com/zfphil/masters/blob/main/Phillips_mastersThesis.pdf}{Coded Illumination Techniques for Phase Imaging and Motion Blur}
   \item Research Advisor: \href{http://www.laurawaller.com}{Laura Waller}
 
 \end{itemize}
 
-\textbf{University of North Carolina, Chapel Hill} \newline
-\emph{B.S. with Highest Honors, \href{https://www.bme.unc.edu/}{Applied Science and Engineering}} \rdate{2009 - 2013}
+\textbf{University of North Carolina, Chapel Hill} ~|~ Chapel Hill, North Carolina  \newline
+\emph{B.S. with Highest Honors, \href{https://www.bme.unc.edu/}{Applied Science and Engineering}}. GPA 3.7 \rdate{August~2009 - May~2013}
 \begin{itemize*}
   \item Research Advisor: \href{http://user.physics.unc.edu/~aold/people.htm}{Amy L. Oldenburg}
 \end{itemize*}
@@ -236,14 +226,14 @@ Phillips}
 
 \smallskip
 \mhead{Tools and \newline Expertise}
-\hspace{-0.005\textwidth}Python (various contexts), CAD (\href{https://www.plm.automation.siemens.com/global/en/products/nx/}{NX}~/~\href{https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjmjfiR6MrwAhWI9uMHHWk2C1EYABAAGgJ5bQ&ae=2&ohost=www.google.com&cid=CAESQeD2LY0X5l4p2HBdFeLnP93VOoKY_Ec01eRXtc12rKZl44vm962KuoKk1LEftKuGJZ0GEwt_7XyS7lcy9ynqNbZv&sig=AOD64_2ZTJzu01bEPQUF4FiWoLmmgt_Ihw&q&adurl&ved=2ahUKEwjsv-yR6MrwAhXLqp4KHbtgDtUQ0Qx6BAgEEAE&dct=1}{Fusion360}~/~\href{https://www.solidworks.com}{SolidWorks}), Machining and 3D printing,
-\\ \qquad\qquad\qquad\qquad PCB Design (\href{https://www.kicad.org}{KiCad}), \href{https://www.mathworks.com/products/matlab.html}{MATLAB}, \href{https://photonengr.com/fred-software/}{FRED Optical Design}, \href{https://www.apple.com/keynote/}{Keynote}~/~\href{https://slides.com/}{slides.com}, Vendor Engagement
+\hspace{-0.005\textwidth}Team-Building and Leadership, Computational Imaging, Python (Development and Technical Leadership), Optical Engineering, Vendor Management, CAD (\href{https://www.plm.automation.siemens.com/global/en/products/nx/}{NX}~/~\href{https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjmjfiR6MrwAhWI9uMHHWk2C1EYABAAGgJ5bQ&ae=2&ohost=www.google.com&cid=CAESQeD2LY0X5l4p2HBdFeLnP93VOoKY_Ec01eRXtc12rKZl44vm962KuoKk1LEftKuGJZ0GEwt_7XyS7lcy9ynqNbZv&sig=AOD64_2ZTJzu01bEPQUF4FiWoLmmgt_Ihw&q&adurl&ved=2ahUKEwjsv-yR6MrwAhXLqp4KHbtgDtUQ0Qx6BAgEEAE&dct=1}{Fusion360}~/~\href{https://www.solidworks.com}{SolidWorks}), Design for Manufacture,
+PCB Design (\href{https://www.kicad.org}{KiCad}), \href{https://www.mathworks.com/products/matlab.html}{MATLAB}, \href{https://photonengr.com/fred-software/}{FRED Optical Design}
 
 
 \smallskip
 \mhead{Awards and \newline Affiliations}%
 \textbf{AS\&T Excellence in Research Award} ~|~  UC Berkeley \rdate{2019}\\
-\textbf{Qinf PhD Fellowship Recipient}~|~ Qualcomm inc.                  \rdate{2016 - 2017}\\
+\textbf{Qinf PhD Fellowship Recipient}~|~ Qualcomm inc.                  \rdate{2016}\\
 \textbf{Eagle Scout} ~|~  Boy Scouts of America         			         \rdate{2008} \\
 
 \begin{center}\textit{Referances available upon request - please email \href{mailto:zack@zackphillips.com}{zack@zackphillips.com}}\end{center}
