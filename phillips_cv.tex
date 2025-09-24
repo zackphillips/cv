@@ -44,8 +44,10 @@
 \usepackage[margin=1.125in,top=1.375in,right=1in,left=1.85in]{geometry}
 \usepackage[strict]{changepage}
 \usepackage[
-  ocgcolorlinks,
-  urlcolor={[rgb]{0,0,0.54}},
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  citecolor=black,
   unicode,
   plainpages=false,
   pdfpagelabels,
@@ -54,59 +56,7 @@
   pdfkeywords={\mykeywords}
 ]{hyperref}
 
-% fix ocgcolor link breaking; thanks due to Benjamin Lerner (http://goo.gl/VZKR7M)
-\makeatletter
-\AtBeginDocument{%
-  \newlength{\temp@x}%
-  \newlength{\temp@y}%
-  \newlength{\temp@w}%
-  \newlength{\temp@h}%
-  \def\my@coords#1#2#3#4{%
-    \setlength{\temp@x}{#1}%
-    \setlength{\temp@y}{#2}%
-    \setlength{\temp@w}{#3}%
-    \setlength{\temp@h}{#4}%
-    \adjustlengths{}%
-    \my@pdfliteral{\strip@pt\temp@x\space\strip@pt\temp@y\space\strip@pt\temp@w\space\strip@pt\temp@h\space re}}%
-  \ifpdf
-    \typeout{In PDF mode}%
-    \def\my@pdfliteral#1{\pdfliteral page{#1}}% I don't know why % this command...
-    \def\adjustlengths{}%
-  \fi
-  \ifxetex
-    \def\my@pdfliteral #1{\special{pdf: literal direct #1}}% isn't equivalent to this one
-    \def\adjustlengths{\setlength{\temp@h}{-\temp@h}\addtolength{\temp@y}{1in}\addtolength{\temp@x}{-1in}}%
-  \fi%
-  \def\Hy@colorlink#1{%
-    \begingroup
-      \ifHy@ocgcolorlinks
-        \def\Hy@ocgcolor{#1}%
-        \my@pdfliteral{q}%
-        \my@pdfliteral{7 Tr}% Set text mode to clipping-only
-      \else
-        \HyColor@UseColor#1%
-      \fi
-  }%
-  \def\Hy@endcolorlink{%
-    \ifHy@ocgcolorlinks%
-      \my@pdfliteral{/OC/OCPrint BDC}%
-      \my@coords{0pt}{0pt}{\pdfpagewidth}{\pdfpageheight}%
-      \my@pdfliteral{F}% Fill clipping path (the url's text) with current color
-      \my@pdfliteral{EMC/OC/OCView BDC}%
-      \begingroup%
-        \expandafter\HyColor@UseColor\Hy@ocgcolor%
-        \my@coords{0pt}{0pt}{\pdfpagewidth}{\pdfpageheight}%
-        \my@pdfliteral{F}% Fill clipping path (the url's text) with \Hy@ocgcolor
-      \endgroup%
-      \my@pdfliteral{EMC}%
-      \my@pdfliteral{0 Tr}% Reset text to normal mode
-      \my@pdfliteral{Q}%
-    \fi
-    \endgroup
-  }%
-}
-\makeatother
-% end fixes
+
 
 \newcommand{\ML}{\textsc{Matlab}}
 
@@ -155,7 +105,7 @@
 \smallskip
 \mhead{Overview}
 \par\vspace{-\baselineskip}
-\mhead{}Full-stack computational sensing engineer with experience prototyping and scaling fit-for-purpose data creation pipelines suitable for ML. Former member of Apple's Exploratory Design Group (XDG).
+\mhead{}I'm a full-stack computational sensing engineer with experience prototyping and scaling fit-for-purpose data creation pipelines suitable for ML, both as a contributor and a leader. Former member of Apple's Exploratory Design Group (XDG) and the Waller Lab at UC Berkeley.
 
 \medskip
 \mhead{Professional \newline Experience}%
@@ -163,12 +113,13 @@
 \par\vspace{-\baselineskip}
 
 \textbf{Computational Microscopy Group, \textbf{insitro}} ~|~ South San Francisco, California \newline
-\emph{Senior Manager, Computational Microscopy}  \rdate{{September~2023 - Present}} \newline
+\emph{Director of Imaging}  \rdate{{September~2025 - Present}} \newline
+\emph{Senior Manager, Computational Microscopy}  \rdate{{September~2023 - August~2025}} \newline
 \emph{Staff Automation Engineer, Microscopy}  \rdate{{March~2023 - September~2023}} \newline
 \emph{Senior Machine Learning Optical Engineer}  \rdate{{November~2021 - March~2023}}
 
 \begin{itemize*}
-  \item Core-team member and full-stack engineer of insitro's ML-enabled drug discovery platform
+  \item Architect, leader, and engineer of insitro's ML-enabled imaging platform for drug discovery
 \end{itemize*}
 
 \textbf{Exploratory Design Group (XDG), \textbf{Apple}} ~|~ Cupertino, California \newline
@@ -182,15 +133,13 @@
 \emph{Graduate Student Researcher (\href{http://www.laurawaller.com}{PI: Laura Waller})} \rdate{July~2014 - May~2019}
 \begin{itemize*}
   \item Developed and published methods for multi-modal and high-throughput optical microscopy
-  \item Spun out hardware development efforts into a commercially successful company (SCI Microscopy)
 \end{itemize*}
 
 \smallskip
 \textbf{SCI Microscopy} ~|~ Berkeley, California \newline
 \emph{CEO and Co-founder (with Laura Waller) - \href{http://sci-microscopy.com}{website}}\rdate{{January~2017 - Present}}
 \begin{itemize*}
-  \item Spin-off company focused on developing illuminators for computational microscopy
-  \item Designed and delivered over 40+ LED arrays to customers across 7+ countries
+  \item Waller Lab spin-off company which develops and sells LED illuminators for microscopy
 \end{itemize*}
 
 \smallskip
