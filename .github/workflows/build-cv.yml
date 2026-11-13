@@ -7,7 +7,9 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: write  # move the "latest" tag and update the release
+  pages: write     # GitHub Pages deploy
+  id-token: write  # required by deploy-pages
 
 concurrency:
   group: build-cv-${{ github.ref }}
@@ -44,3 +46,34 @@ jobs:
             gh release create latest --title "Latest CV" --latest \
               --notes "Built automatically from master."
           gh release upload latest phillips_cv.pdf --clobber
+
+      - name: Stage GitHub Pages site
+        if: github.event_name != 'pull_request'
+        run: |
+          mkdir -p site
+          cp phillips_cv.pdf site/
+          cat > site/index.html <<'HTML'
+          <!doctype html>
+          <meta charset="utf-8">
+          <title>Zack Phillips CV</title>
+          <meta http-equiv="refresh" content="0; url=phillips_cv.pdf">
+          <a href="phillips_cv.pdf">phillips_cv.pdf</a>
+          HTML
+
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+  deploy-pages:
+    # Serves the PDF inline (release assets download as attachments).
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}phillips_cv.pdf
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
