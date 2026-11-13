@@ -27,6 +27,8 @@
 }
 
 \setlength\parindent{0pt}
+\tolerance=1000
+\emergencystretch=3em
 
 \newenvironment{itemize*}%
 {\begin{itemize}%
@@ -60,7 +62,7 @@
 
 \newcommand{\ML}{\textsc{Matlab}}
 
-\newcommand{\mhead}[1]{\leavevmode\marginpar{\sffamily\footnotesize #1}}
+\newcommand{\mhead}[1]{\leavevmode\marginpar{\raggedright\sffamily\footnotesize #1}}
 \newcommand{\rdate}[1]{{} \hfill #1}
 \renewcommand{\date}[1]{{} #1}
 \renewcommand{\labelitemi}{-}
@@ -174,11 +176,13 @@
 \mhead{Awards and \newline Affiliations}%
 \textbf{AS\&T Excellence in Research Award} ~|~  UC Berkeley \rdate{2019}\\
 \textbf{Qualcomm Innovation Fellowship (QInF)}~|~ Qualcomm Inc.                  \rdate{2016}\\
-\textbf{Eagle Scout} ~|~  Boy Scouts of America         			         \rdate{2008} \\
+\textbf{Eagle Scout} ~|~  Boy Scouts of America         			         \rdate{2008}
 
 \begin{center}\textit{References available upon request - please email \href{mailto:zack@zackphillips.com}{zack@zackphillips.com}}\end{center}
 
 \newpage
+% Ragged right: long titles and author lists in a narrow column leave loose justified lines
+\raggedright
 \mhead{Publications}%
 \par\vspace{-\baselineskip}
 
@@ -211,8 +215,8 @@ PLoS ONE 12(2): e0171228. \href{http://journals.plos.org/plosone/article?id=10.1
 P. Llull, L. Bange, \textbf{Z.F. Phillips}, K. Davis, D. L. Marks, D.J. Brady~(\date{20 \textsc{December} 2015}) \emph{Characterization of the AWARE 40 wide-field-of-view visible imager}. Optica 2 (12), 1086-1089. \href{https://doi.org/10.1364/OPTICA.2.001086}{(doi)}
 
 \medskip
-\textbf{Z.F. Phillips}, M.V. D'Ambrosio, L. Tian, J. Rulison, H.S. Patel, N. Sadras, A. Gande, N. Switz, \linebreak D.A. Fletcher and L. Waller~(\date{13 \textsc{May} 2015}).
-\emph{Multi-Contrast Imaging and Digital Refocusing on a Mobile  \linebreak Microscope with a Domed LED Array}.
+\textbf{Z.F. Phillips}, M.V. D'Ambrosio, L. Tian, J. Rulison, H.S. Patel, N. Sadras, A. Gande, N. Switz, D.A. Fletcher and L. Waller~(\date{13 \textsc{May} 2015}).
+\emph{Multi-Contrast Imaging and Digital Refocusing on a Mobile Microscope with a Domed LED Array}.
 PLoS ONE 10(5): e0124938. \href{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0124938}{(doi)}
 
 \medskip
@@ -222,7 +226,7 @@ Applied Optics 53(13) C54-C63.  \href{https://www.osapublishing.org/ao/abstract.
 
 \medskip
 R.K. Chhetri, \textbf{Z.F. Phillips}, M.A. Troester, A.L. Oldenburg~(\date{2012}).
-\emph{Longitudinal study of mammary \linebreak epithelial and fibroblast co-cultures using optical coherence tomography reveals morphological  \linebreak hallmarks of premalignancy}.
+\emph{Longitudinal study of mammary epithelial and fibroblast co-cultures using optical coherence tomography reveals morphological hallmarks of premalignancy}.
 PLoS ONE 7(11) e49148  \href{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0049148}{(doi)}
 
 \medskip
@@ -231,7 +235,7 @@ PLoS ONE 7(11) e49148  \href{http://journals.plos.org/plosone/article?id=10.1371
 \par\vspace{-\baselineskip}
 
 \textbf{Z.F. Phillips}, S. Dean, B. Recht, and L. Waller (\date{15 \textsc{April}~2019})
-\emph{High-Throughput Fluorescence  \linebreak Microscopy Using Motion Deblurring.} Focus on Microscopy 2019.
+\emph{High-Throughput Fluorescence Microscopy Using Motion Deblurring.} Focus on Microscopy 2019.
 \medskip
 
 S. Dean, \textbf{Z. Phillips}, L. Waller and B. Recht~(\date{25 \textsc{June}~2018}).~\emph{Optimal Path and Illumination Design for Multiframe Motion Deblurring}.
@@ -239,15 +243,15 @@ Imaging Systems and Applications, ITu2B.
 \medskip
 
 \textbf{Z.F. Phillips}, S. Dean, B. Recht, and L. Waller (\date{27 \textsc{March}~2018})
-\emph{Multi-Frame Motion Imaging For  \linebreak Optical Microscopy.} Focus on Microscopy 2018.
+\emph{Multi-Frame Motion Imaging For Optical Microscopy.} Focus on Microscopy 2018.
 \medskip
 
 \textbf{Z.F. Phillips}, M. Chen, R. Eckert, L.H. Yeh, L. Waller (\date{7 \textsc{November}~2017})
-\emph{Algorithmic  \linebreak Self-Calibration in Computational Imaging.} SIAM Data Driven Approaches in Imaging Science 2017.
+\emph{Algorithmic Self-Calibration in Computational Imaging.} SIAM Data Driven Approaches in Imaging Science 2017.
 \medskip
 
 \textbf{Z.F. Phillips}, R. Eckert, L. Waller (\date{7 \textsc{June}~2017})
-\emph{Quasi-Dome: A Self-Calibrated High-NA LED  \linebreak Illuminator for Fourier Ptychography.} OSA Imaging Systems and Applications, Paper \href{https://www.osapublishing.org/abstract.cfm?uri=ISA-2017-IW4E.5}{IW4E.5}.
+\emph{Quasi-Dome: A Self-Calibrated High-NA LED Illuminator for Fourier Ptychography.} OSA Imaging Systems and Applications, Paper \href{https://www.osapublishing.org/abstract.cfm?uri=ISA-2017-IW4E.5}{IW4E.5}.
 \medskip
 
 \textbf{Z.F. Phillips}, M. Chen, L. Waller (\date{7 \textsc{April}~2017})
@@ -259,32 +263,32 @@ Imaging Systems and Applications, ITu2B.
 \medskip
 
 \textbf{Z.F. Phillips}, M. Chen, L. Waller (\date{7 \textsc{April}~2016})
-\emph{Amplitude and Phase Recovery from Motion Blur  \linebreak Deconvolution.} SPIE DCS Computational Imaging, Paper 9870-17.
+\emph{Amplitude and Phase Recovery from Motion Blur Deconvolution.} SPIE DCS Computational Imaging, Paper 9870-17.
 \medskip
 
 G. Gunjala, \textbf{Z.F. Phillips}, L. Waller (\date{7 \textsc{April}~2016})
-\emph{Optimal LED illuminator design for Fourier  \linebreak ptychographic microscopy} SPIE DCS Computational Imaging, Paper 9870-13.
+\emph{Optimal LED illuminator design for Fourier ptychographic microscopy} SPIE DCS Computational Imaging, Paper 9870-13.
 \medskip
 
 \textbf{Z.F. Phillips}, G. Gunjala, P. Varma, J. Zhong, L. Waller (\date{7 \textsc{June}~2015})
-\emph{Design of a Domed LED  \linebreak Illuminator for High-Angle Computational Illumination.} OSA Imaging Systems, Paper \href{https://www.osapublishing.org/abstract.cfm?uri=ISA-2015-ITh1A.2}{ITh1A.2}.
+\emph{Design of a Domed LED Illuminator for High-Angle Computational Illumination.} OSA Imaging Systems, Paper \href{https://www.osapublishing.org/abstract.cfm?uri=ISA-2015-ITh1A.2}{ITh1A.2}.
 \medskip
 
-\textbf{Z.F. Phillips}, M.V. D'Ambrosio, L. Tian, J. Rulison, H.S. Patel, N. Sadras, A. Gande, N. Switz,  \linebreak D.A. Fletcher, L. Waller (\date{12 \textsc{April}~2015})
-\emph{Computational CellScope: Multi-Contrast Imaging on a  \linebreak Smartphone-Based Microscope Using a Domed Programmable LED Array}. OSA Bio-Optics:  \linebreak Design and Application, Paper \href{https://www.osapublishing.org/abstract.cfm?uri=BODA-2015-BM3A.7}{BM3A.7}.
+\textbf{Z.F. Phillips}, M.V. D'Ambrosio, L. Tian, J. Rulison, H.S. Patel, N. Sadras, A. Gande, N. Switz, D.A. Fletcher, L. Waller (\date{12 \textsc{April}~2015})
+\emph{Computational CellScope: Multi-Contrast Imaging on a Smartphone-Based Microscope Using a Domed Programmable LED Array}. OSA Bio-Optics: Design and Application, Paper \href{https://www.osapublishing.org/abstract.cfm?uri=BODA-2015-BM3A.7}{BM3A.7}.
 \medskip
 
 
 D.L. Marks, J.G. Anderson, \textbf{Z.F. Phillips}, S.T. McCain, D.J. Brady (\date{19 \textsc{October}~2014})
-\emph{Gigapixel  \linebreak Whole-Body Microscopy.} Frontiers in Optics, Paper FTu2F.5.
+\emph{Gigapixel Whole-Body Microscopy.} Frontiers in Optics, Paper FTu2F.5.
 \medskip
 
 D.L. Marks, \textbf{Z.F. Phillips}, S.D. Feller, D.J. Brady (\date{22 \textsc{June}~2014})
-\emph{Multiscale Camera Objective with sub 2 Arcsec Resolution, 36 degree Field-of-View} Computational Optical Sensing and Imaging,  \linebreak Paper CTh1C.3.
+\emph{Multiscale Camera Objective with sub 2 Arcsec Resolution, 36 degree Field-of-View} Computational Optical Sensing and Imaging, Paper CTh1C.3.
 \medskip
 
 \textbf{Z.F. Phillips}, Chhetri, R.K., Cooper, J., Troester, M.A., Oldenburg, A.L. (\date{2 \textsc{February}~2013})
-\emph{Fractals and  \linebreak fluctuations: spatial and temporal correlations in optical coherence tomography of human breast  \linebreak cancer models}. Dynamics and Fluctuations in Biomedical Photonics X (SPIE Photonics West), Paper 8580-2.
+\emph{Fractals and fluctuations: spatial and temporal correlations in optical coherence tomography of human breast cancer models}. Dynamics and Fluctuations in Biomedical Photonics X (SPIE Photonics West), Paper 8580-2.
 \medskip
 
 \end{document}
