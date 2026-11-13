@@ -2,7 +2,7 @@ name: Build CV
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -44,7 +44,7 @@ jobs:
           git push -f origin refs/tags/latest
           gh release view latest >/dev/null 2>&1 || \
             gh release create latest --title "Latest CV" --latest \
-              --notes "Built automatically from master."
+              --notes "Built automatically from main."
           gh release upload latest phillips_cv.pdf --clobber
 
       - name: Stage GitHub Pages site
