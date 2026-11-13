@@ -27,10 +27,10 @@ jobs:
         run: tectonic phillips_cv.tex
 
       - name: Upload PDF artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
-          name: phillips_cv
           path: phillips_cv.pdf
+          archive: false  # plain PDF download, not a zip
           retention-days: 7
 
       - name: Publish to "latest" release
