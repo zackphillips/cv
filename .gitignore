@@ -219,3 +219,6 @@ TSWLatexianTemp*
 # expex forward references with \gathertags
 *-tags.tex
 *.xdv
+
+# Built by CI and published as a release asset
+phillips_cv.pdf

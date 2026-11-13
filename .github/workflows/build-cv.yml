@@ -1,0 +1,46 @@
+name: Build CV
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-cv-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    # macOS runner: Optima ships with macOS and isn't available on Linux runners.
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Tectonic
+        run: brew install tectonic
+
+      - name: Compile
+        run: tectonic phillips_cv.tex
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: phillips_cv
+          path: phillips_cv.pdf
+          retention-days: 7
+
+      - name: Publish to "latest" release
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git tag -f latest
+          git push -f origin refs/tags/latest
+          gh release view latest >/dev/null 2>&1 || \
+            gh release create latest --title "Latest CV" --latest \
+              --notes "Built automatically from master."
+          gh release upload latest phillips_cv.pdf --clobber
