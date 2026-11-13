@@ -18,7 +18,7 @@ jobs:
     # macOS runner: Optima ships with macOS and isn't available on Linux runners.
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Install Tectonic
         run: brew install tectonic
@@ -27,7 +27,7 @@ jobs:
         run: tectonic phillips_cv.tex
 
       - name: Upload PDF artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: phillips_cv
           path: phillips_cv.pdf
