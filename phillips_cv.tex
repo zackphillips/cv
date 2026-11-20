@@ -65,6 +65,8 @@
 
 \newcommand{\mhead}[1]{\leavevmode\marginpar{\raggedright\sffamily\footnotesize #1}}
 \newcommand{\rdate}[1]{{} \hfill #1}
+% Entry header row: name at 1.2x (\large = 14.4pt on the 12pt base), location at body size
+\newcommand{\entryhead}[2]{{\large #1}\rdate{#2}}
 \renewcommand{\date}[1]{#1}
 \renewcommand{\labelitemi}{-}
 
@@ -114,7 +116,7 @@
 
 \par\vspace{-\baselineskip}
 
-\textbf{insitro}, Cell ML Platform \textit{(hybrid)} \rdate{South San Francisco, California}\newline
+\entryhead{\textbf{insitro}, Cell ML Platform \textit{(hybrid)}}{South San Francisco, California}\newline
 \emph{Director of Imaging, Cellular Machine Learning}  \rdate{{September~2025 -- Present}} \newline
 \emph{Senior Manager, Computational Microscopy}  \rdate{{September~2023 -- August~2025}} \newline
 \emph{Staff Automation Engineer, Microscopy}  \rdate{{March~2023 -- August~2023}} \newline
@@ -124,7 +126,7 @@
   \item Architect of insitro's high-throughput imaging platform, which generates ML-ready microscopy datasets for early-stage drug discovery, including \href{https://doi.org/10.1038/s41467-025-66778-6}{pooled Cell Painting CRISPR screening}
 \end{itemize*}
 
-\textbf{Apple}, Exploratory Design Group (XDG) \textit{(hybrid)} \rdate{Cupertino, California}\newline
+\entryhead{\textbf{Apple}, Exploratory Design Group (XDG) \textit{(hybrid)}}{Cupertino, California}\newline
 \emph{Photonics Engineer}  \rdate{{July~2019 -- October~2021}}
 \begin{itemize*}
   \item Tech lead for an exploratory biophotonics prototype, covering optomechanical simulation and tolerance analysis (FRED, FEA), FMEA, human-factors assessment, and a human-subjects study
@@ -133,7 +135,7 @@
 \end{itemize*}
 
 \smallskip
-\textbf{Duke University}, DISP Lab \textit{(on-site)}  \rdate{Durham, North Carolina}\newline
+\entryhead{\textbf{Duke University}, DISP Lab \textit{(on-site)}}{Durham, North Carolina}\newline
 \emph{Associate in Research (\href{http://www.disp.duke.edu/}{PI: David Brady}) } \rdate{May~2013 -- May~2014}
 \begin{itemize*}
 	\item R\&D engineer for AWARE Gigapixel camera; Work featured in \href{http://www.npr.org/2013/12/10/250000359/supercamera-more-pixels-than-you-know-what-to-do-with}{NPR's \textit{All Things Considered}}
@@ -141,13 +143,13 @@
 
 \medskip
 \mhead{Education}%
-\textbf{University of California, Berkeley}\rdate{Berkeley, California}\newline
+\entryhead{\textbf{University of California, Berkeley}}{Berkeley, California}\newline
 \emph{Ph.D. and M.S., \href{http://ast.coe.berkeley.edu/}{Applied Science and Technology}}. \rdate{June~2014 -- May~2019}
 \begin{itemize*}
   \item Dissertation: \href{https://escholarship.org/uc/item/70d9j190}{Quantitative Microscopy Using Coded Illumination}
 \end{itemize*}
 
-\textbf{University of North Carolina, Chapel Hill} \rdate{Chapel Hill, North Carolina}\newline
+\entryhead{\textbf{University of North Carolina, Chapel Hill}}{Chapel Hill, North Carolina}\newline
 \emph{B.S. with Highest Honors, \href{https://www.bme.unc.edu/}{Applied Science and Engineering}}. \rdate{August~2009 -- May~2013}
 
 
